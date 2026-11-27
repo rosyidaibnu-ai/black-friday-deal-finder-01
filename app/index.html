@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FridayList — Black Friday 2026 Deal Finder</title>
+<meta name="description" content="36 Black Friday and Cyber Monday deals, each price checked on 27 November 2026 at its store or in a deals source that names the store.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Black Friday &middot; Friday 27 November 2026 &middot; Cyber Monday 30 November</p>
+    <h1>Friday<span>List</span></h1>
+    <p class="tagline">The deals worth your money — every price checked today, every cut judged honestly.</p>
+    <p class="checked-note">All 36 prices read on 27 Nov 2026, 06:30 UTC, at the store or in a deals source that names the store. Prices move fast — verify at the store before you pay.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="stats" class="stats" aria-label="Board summary"></section>
+
+  <section class="controls" aria-label="Search and filters">
+    <label class="field search-field">
+      <span>Search</span>
+      <input id="q" type="search" placeholder="Try “macbook”, “lego”, “headphones”…" autocomplete="off">
+    </label>
+    <label class="field">
+      <span>Category</span>
+      <select id="category"></select>
+    </label>
+    <label class="field">
+      <span>Store</span>
+      <select id="store"></select>
+    </label>
+    <label class="field">
+      <span>Min. discount</span>
+      <select id="mindisc">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="30">30% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Sort by</span>
+      <select id="sort">
+        <option value="verdict">Best verdict first</option>
+        <option value="discount">Biggest discount %</option>
+        <option value="saving">Biggest saving ($)</option>
+        <option value="price-asc">Lowest price</option>
+        <option value="price-desc">Highest price</option>
+      </select>
+    </label>
+    <label class="field check-field">
+      <input id="newlows" type="checkbox">
+      <span>New lows only</span>
+    </label>
+  </section>
+
+  <p id="count" class="count" aria-live="polite"></p>
+
+  <section id="list" class="grid" aria-label="Deals"></section>
+
+  <section id="detail" class="detail" hidden aria-label="Deal detail"></section>
+
+  <section class="method" aria-label="How this board works">
+    <h2>How this board works</h2>
+    <p>Every deal on this page was found and checked by the maker on 27 November 2026. Each card shows the sale price, the usual price, the discount, when the price was checked, and where it was read — a store page or a deals roundup that names the store. The verdict on each deal is the maker's honest read:</p>
+    <ul>
+      <li><strong class="v-new-low">NEW LOW</strong> — the source calls it an all-time low, the cheapest it has ever tracked.</li>
+      <li><strong class="v-strong">STRONG DEAL</strong> — a real cut worth acting on, 25% off or more, or a rare cut on something that almost never discounts.</li>
+      <li><strong class="v-routine">ROUTINE SALE</strong> — a small or common cut. Still a saving, but nothing to rush for.</li>
+    </ul>
+    <p>Where the same product is cheaper — or the same price — at another store, the card says so. No deal here is invented, and no price is from before this sale: a deal whose store page no longer shows the price should be treated as gone.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>FridayList — a Black Friday 2026 deal board. Prices checked 27 Nov 2026, 06:30 UTC. Not affiliated with any store. Store links open the store's own page for that product.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
